@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: SpringAI
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: mistral
+
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.1
+
+logging:
+  level:
+    org.springframework.ai:
+      chat.client: DEBUG
+
+
